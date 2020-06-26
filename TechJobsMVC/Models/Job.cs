@@ -52,12 +52,12 @@ namespace TechJobsMVC.Models
                 PositionType.Value = "Data not available";
             }
 
-            output = string.Format("\nID: %d\n" +
-                    "Name: %s\n" +
-                    "Employer: %s\n" +
-                    "Location: %s\n" +
-                    "Position Type: %s\n" +
-                    "Core Competency: %s\n", Id, Name, Employer, Location, PositionType, CoreCompetency);
+            output = $"\nID: {Id}\n" +
+                    $"Name: {Name}\n" +
+                    $"Employer: {Employer}\n" +
+                    $"Location: {Location}\n" +
+                    $"Position Type: {PositionType}\n" +
+                    $"Core Competency: {CoreCompetency}\n";
             return output;
         }
 

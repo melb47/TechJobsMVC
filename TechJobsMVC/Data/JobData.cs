@@ -45,7 +45,6 @@ namespace TechJobsMVC.Data
             }
             foreach (Job job in AllJobs)
             {
-
                 string aValue = GetFieldValue(job, column);
 
                 if (aValue != null && aValue.ToLower().Contains(value.ToLower()))
@@ -86,7 +85,6 @@ namespace TechJobsMVC.Data
 
         static public List<Job> FindByValue(string value)
         {
-
             // load data, if not already loaded
             LoadData();
 
@@ -94,7 +92,6 @@ namespace TechJobsMVC.Data
 
             foreach (Job job in AllJobs)
             {
-
                 if (job.Name.ToLower().Contains(value.ToLower()))
                 {
                     jobs.Add(job);
@@ -115,9 +112,7 @@ namespace TechJobsMVC.Data
                 {
                     jobs.Add(job);
                 }
-
             }
-
             return jobs;
         }
 
@@ -141,7 +136,6 @@ namespace TechJobsMVC.Data
             }
 
             List<string[]> rows = new List<string[]>();
-
 
             using (StreamReader reader = File.OpenText(DATA_FILE))
             {

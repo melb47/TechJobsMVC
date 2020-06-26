@@ -55,6 +55,13 @@ namespace TechJobsMVC.Controllers
                 ViewBag.title = "Jobs with " + ColumnChoices[column] + ": " + value;
             }
             ViewBag.jobs = jobs;
+            foreach (var job in ViewBag.jobs)
+            {
+                ViewBag.employer = job.Employer;
+                ViewBag.location = job.Location;
+                ViewBag.position = job.PositionType;
+                ViewBag.skill = job.CoreCompetency;
+            }
 
             return View();
         }

@@ -16,7 +16,6 @@ namespace TechJobsMVC.Models
         public JobField(string value) : this()
         {
             Value = value;
-
         }
 
         public override string ToString()
